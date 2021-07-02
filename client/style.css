@@ -1,0 +1,48 @@
+body{
+  background-color: aqua;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container{
+  background-color: azure;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.nevigation-container{
+  grid-column: 1/2;
+  border: black;
+  border-style: solid;
+  padding: 10px;
+  background-color: cyan;
+}
+
+.room-container, .friends-container{
+  background-color: white;
+  padding: 2px;
+}
+li{
+  list-style: none;
+  align-self: center;
+}
+
+.chat-container{
+  grid-column: 2/3;
+  padding: 10px;
+}
+
+.message-container{
+  height: 90%;
+  padding: 4px;
+  margin-bottom: 4px;
+  background-color: cadetblue;
+}
+
+.chat-container form{
+  align-self: center;
+}
