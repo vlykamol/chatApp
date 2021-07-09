@@ -1,30 +1,39 @@
 body{
-  background-color: aqua;
   box-sizing: border-box;
+  position: absolute;
   margin: 0;
   padding: 0;
+  height: 100vh;
+  min-height: 100%;
+  width: 100vw;
+  min-width: 100%;
 }
 
 .main-container{
-  background-color: azure;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  padding: 10px;
-  margin: 10px;
+  position: relative;
+  background-color: #333;
+  display: flex;
+  flex-direction: row;
+  height: inherit;
+  width: inherit;
 }
 
 .nevigation-container{
-  grid-column: 1/2;
   border: black;
   border-style: solid;
   padding: 10px;
   background-color: cyan;
+  width: 25%;
 }
 
 .room-container, .friends-container{
   background-color: white;
   padding: 2px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 li{
   list-style: none;
@@ -32,17 +41,41 @@ li{
 }
 
 .chat-container{
-  grid-column: 2/3;
   padding: 10px;
+  width: inherit;
+  height: initial;
 }
 
 .message-container{
-  height: 90%;
-  padding: 4px;
-  margin-bottom: 4px;
+  height: 95%;
   background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
 }
 
 .chat-container form{
-  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  padding-top: 6px;
+}
+
+.chat-container form input{
+  width: 90%;
+  margin-right: 0.625rem;
+}
+
+.sender, .recever{
+  padding: 00.625rem;
+}
+
+.sender{
+  /* background: greenyellow; */
+  text-align: left;
+}
+
+.recever{
+  /* background: red; */
+  text-align: right;
 }
