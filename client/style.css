@@ -12,7 +12,7 @@ body{
 .main-container{
   position: relative;
   background-color: #333;
-  display: flex;
+  display: none;
   flex-direction: row;
   height: inherit;
   width: inherit;
@@ -78,4 +78,37 @@ li{
 .recever{
   /* background: red; */
   text-align: right;
+}
+
+.join-container{
+  width: 25rem;
+  height: max-content;
+  /* aspect-ratio: 3 / 2; */
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  border: 3px solid green; 
+}
+
+.join-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.join-form label{
+  margin: 10px;
+  margin-bottom: 0;
+  font-size: 24px;
+  
+}
+.join-form input{
+  margin: 10px;
+  margin-top: 0;
+  font-size: 20px;
+}
+.join-form button{
+  margin: 10px;
+  font-size: 24px;
 }

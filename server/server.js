@@ -13,11 +13,12 @@ const io = require("socket.io")(httpServer, {
   }
 });
 
+
 io.on("connection", (socket) => {
-  console.log(socket.id);
+  console.log('client connected with id: ' + socket.id);
   socket.on('send-msg',(message) => {
     socket.broadcast.emit('receive-msg',(message));
-    console.log(message);
+    // console.log(message);
   })
 });
 

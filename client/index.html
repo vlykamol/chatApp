@@ -7,9 +7,26 @@
   <link rel="stylesheet" href="style.css">
   <script type="module" src="main.js" defer></script>
   <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
+  <!-- <script src="socket.io/socket.io.js"></script> -->
+
   <title>chatApp</title>
 </head>
 <body>
+  <div class="join-container">
+    <form class="join-form">
+      <h1>JOIN ROOM</h1>
+      <label for="name">
+        Name:
+      </label>
+      <input type="text" id="name" required autofocus>
+      <label for="room">
+        Room:
+      </label>
+      <input type="text" id="room">
+      <button type="submit">Join</button>
+    </form>
+  </div>
+
   <div class="main-container">
     <div class="nevigation-container">
       <ul class="room-container">
@@ -28,13 +45,15 @@
         <li>friend4</li>
         <li>freind5</li>
       </ul>
+      <h2>your id:</h2>
     </div>
 
     <div class="chat-container">
       <div class="message-container">
+        <center><h1>lobby</h1></center>
       </div>
-      <form>
-        <input type="text" placeholder="what's on your mind" autofocus>
+      <form id="chat-form">
+        <input type="text" placeholder="what's on your mind">
         <button>send</button>
       </form>
     </div>
