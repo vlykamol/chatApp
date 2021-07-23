@@ -19,19 +19,18 @@ io.on("connection", (socket) => {
 
 
   socket.on('send-msg', (message, room) => {
-    if(room === ""){
-      socket.broadcast.emit('receive-msg',(message));
-      console.log('in lobby');
+    if(room === null){
+      socket.broadcast.emit('receive-msg',room = 'lobby', message);
+      console.log(`in ${room} msg`, message);
     }else{
-      socket.to(room).emit('receive-msg',(message));
-      console.log('in room:',room);
+      socket.to(room).emit('receive-msg',room, message);
+      console.log(`in ${room} msg`, message);
     }
-    console.log(message);
   })
 
-  socket.on('newConnection', (userName,roomId) => {
-    console.log('server: usr ' + userName, 'id ' + roomId)
-    socket.broadcast.emit('newConnection', userName,roomId)
+  socket.on('newConnection', (userName) => {
+    console.log('server: usr ' + userName)
+    socket.broadcast.emit('newConnection', userName)
   })
 
   socket.on('join-room',(room, user) => {
